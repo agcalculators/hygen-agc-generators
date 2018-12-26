@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>-progress.tsx
+to: src/components/<%=name%>/<%=name%>-progress/<%=name%>-progress.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component, State, Prop } from '@stencil/core';

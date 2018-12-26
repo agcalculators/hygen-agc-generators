@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>-results-placeholder.tsx
+to: src/components/<%=name%>/<%=name%>-results-placeholder/<%=name%>-results-placeholder.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component } from '@stencil/core';

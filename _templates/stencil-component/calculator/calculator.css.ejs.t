@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>.css
+to: src/components/<%=name%>/<%=name%>/<%=name%>.css
 ---
 <%=name%> {
     /* Styles */

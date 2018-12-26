@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>.tsx
+to: src/components/<%=name%>/<%=name%>/<%=name%>.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component, State, Event, EventEmitter, Prop } from '@stencil/core';

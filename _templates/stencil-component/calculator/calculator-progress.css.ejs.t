@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>-progress.css
+to: src/components/<%=name%>/<%=name%>-progress/<%=name%>-progress.css
 ---
 <%=name%>-progress * {
     box-sizing: border-box;

@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>-results.css
+to: src/components/<%=name%>/<%=name%>-results/<%=name%>-results.css
 ---
 <%=name%>-results section {
     font-size: var(--agc-form-results-font-size, 22px);

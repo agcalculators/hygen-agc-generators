@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>-results-placeholder.css
+to: src/components/<%=name%>/<%=name%>-results-placeholder/<%=name%>-results-placeholder.css
 ---
 <%=name%>-results-placeholder section {
     font-size: var(--agc-form-results-font-size, 22px);
