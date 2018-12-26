@@ -1,13 +1,12 @@
 ---
-to: src/components/<%=name%>/<%=name%>/<%=name%>.tsx
+to: src/components/<%=name%>/<%=name%>.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component, State, Event, EventEmitter, Prop } from '@stencil/core';
 // import { addDays, formatDate, inputDate, daysBetween } from '../../utils'
 
 @Component({
-    tag: '<%=name%>',
-    styleUrl: '<%=name%>.css'
+    tag: '<%=name%>'
 })
 export class <%=comp%> {
 

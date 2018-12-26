@@ -1,13 +1,12 @@
 ---
-to: src/components/<%=name%>/<%=name%>-results/<%=name%>-results.tsx
+to: src/components/<%=name%>-results/<%=name%>-results.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component, Prop, State } from '@stencil/core';
 
 
 @Component({
-    tag: '<%=name%>-results',
-    styleUrl: '<%=name%>-results.css'
+    tag: '<%=name%>-results'
 })
 export class <%=comp%>Results {
     @Prop() socket: string = ""

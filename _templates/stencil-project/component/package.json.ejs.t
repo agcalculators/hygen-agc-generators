@@ -2,7 +2,7 @@
 to: <%=library%>.package.json
 ---
 {
-  "name": "@agc-calculators/<%=library%>",
+  "name": "<%=library%>",
   "version": "1.0.0",
   "description": "",
   "module": "dist/esm/index.js",

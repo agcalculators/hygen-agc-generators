@@ -1,13 +1,12 @@
 ---
-to: src/components/<%=name%>/<%=name%>-results-placeholder/<%=name%>-results-placeholder.tsx
+to: src/components/<%=name%>-results-placeholder/<%=name%>-results-placeholder.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component } from '@stencil/core';
 
 
 @Component({
-    tag: '<%=name%>-results-placeholder',
-    styleUrl: '<%=name%>-results-placeholder.css'
+    tag: '<%=name%>-results-placeholder'
 })
 export class <%=comp%>ResultsPlaceholder {
 
