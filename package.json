@@ -1,16 +1,12 @@
 {
-  "name": "hygen-cra",
+  "name": "hygen-agc-generators",
   "version": "1.0.0",
-  "description": "A hygen package for create-react-app",
+  "description": "A hygen package for custom generators",
   "keywords": [
     "hygen",
-    "generator",
-    "boilerplate",
-    "redux",
-    "react",
-    "create-react-app"
+    "generator"
   ],
   "main": "index.js",
-  "repository": "https://github.com/jondot/hygen-CRA",
+  "repository": "https://github.com/johnrob1880/hygen-agc-generators",
   "license": "MIT"
 }
