@@ -34,4 +34,20 @@ export const daysBetween = (d1, d2) => {
   var firstDate = new Date(d1);
   var secondDate = new Date(d2);
   return Math.round((firstDate.getTime() - secondDate.getTime())/(oneDay));
+}     
+
+export const validate = (form:HTMLFormElement, name:string) => {
+    let el = form.querySelector(`[name="${name}"]`) as HTMLInputElement;
+    let message = form.querySelector(`[data-validates="${name}"`) as HTMLParagraphElement;
+    if (!el.checkValidity()) {        
+        if (el.className.indexOf('invalid') === -1) {
+            el.className += " invalid";
+        }
+        message.style.display = 'block';
+        return false;
+    } else {
+        el.className = el.className.replace(" invalid", "");
+        message.style.display = 'none';
+    }
+    return true
 }
