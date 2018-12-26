@@ -3,7 +3,7 @@ to: src/components/<%=name%>/<%=name%>.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
 import { Component, State, Event, EventEmitter, Prop } from '@stencil/core';
-import { addDays, formatDate, inputDate, daysBetween } from '../../utils'
+// import { addDays, formatDate, inputDate, daysBetween } from '../../utils'
 
 @Component({
     tag: '<%=name%>',
@@ -38,12 +38,12 @@ export class <%=comp%> {
                         <div class="agc-wizard__field">
                             <label data-i18n="fields.first">First</label>
                             <input name="first" type="text" required />
-                            <p class="agc-wizard__validation-message" data-i18n="validation.first.required" data-validates="calvingDate">Please enter a valid date.</p>
+                            <p class="agc-wizard__validation-message" data-i18n="validation.first.required" data-validates="first">Please enter a value.</p>
                             <p data-i18n="hints.first">⮤ Enter a value here.</p>
                         </div>
-                        {this.mode === 'step' && (<div class="agc-wizard__actions">
-                            <button class="agc-wizard__actions-next" data-i18n="actions.next" onClick={this.nextPrev.bind(this, 1)}>Next</button>
-                        </div>)}
+                        <div class="agc-wizard__actions">
+                            <button class="agc-wizard__actions-next" data-i18n="actions.finish" onClick={this.nextPrev.bind(this, this.mode === 'step' ? 1 : 2)}>Calculate</button>
+                        </div>
                     </section>
                     <section data-wizard-results>                        
                         <slot name="results"></slot>                     
@@ -74,18 +74,18 @@ export class <%=comp%> {
         let valid = true;
 
         if (this.currentStep === 0 || this.mode === 'full') {
-            let calvingDate = this.form.querySelector('[name="calvingDate"]') as HTMLInputElement
-            let calvingDateMessage = this.form.querySelector('[data-validates="calvingDate"') as HTMLParagraphElement
+            let el = this.form.querySelector('[name="first"]') as HTMLInputElement
+            let message = this.form.querySelector('[data-validates="first"') as HTMLParagraphElement
             
-            if (!calvingDate.checkValidity()) {
+            if (!el.checkValidity()) {
                 valid = false;
-                if (calvingDate.className.indexOf('invalid') === -1) {
-                    calvingDate.className += " invalid";
+                if (el.className.indexOf('invalid') === -1) {
+                    el.className += " invalid";
                 }
-                calvingDateMessage.style.display = 'block';
+                message.style.display = 'block';
             } else {
-                calvingDate.className = calvingDate.className.replace(" invalid", "");
-                calvingDateMessage.style.display = 'none';
+                el.className = el.className.replace(" invalid", "");
+                message.style.display = 'none';
             }
         }
         
