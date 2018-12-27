@@ -33,6 +33,7 @@ form.agc-wizard label {
     margin: var(--agc-form-label-margin, 0 0 5px 0);
 }
 form.agc-wizard input[type="text"],
+form.agc-wizard input[type="number"],
 form.agc-wizard input[type="date"],
 form.agc-wizard select {
     padding: var(--agc-form-input-padding, 10px);
