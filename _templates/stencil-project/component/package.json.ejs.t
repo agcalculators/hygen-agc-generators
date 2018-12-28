@@ -7,7 +7,7 @@ to: <%=library%>.package.json
   "description": "",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
-  "unpkg": "dist/agc-breeding-date.js",
+  "unpkg": "dist/<%=library%>.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [

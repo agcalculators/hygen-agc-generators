@@ -51,3 +51,7 @@ export const validate = (form:HTMLFormElement, name:string) => {
     }
     return true
 }
+
+export const round = (num, places:number) => {
+    return +(Math.round(new Number(`${num}e+${places}`).valueOf())  + "e-" + places);
+}

@@ -6,14 +6,25 @@ to: src/index.html
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title><%=h.inflection.undasherize(library)%></title>
+  <link rel="stylesheet" href="/build/<%=library%>.css" type="text/css" />
   <script src="/build/<%=library%>.js"></script>
 </head>
 <body>
 
-  <div>
-    <<%=library%> />
-  </div>
+  <<%=library%> />
+
+  <!--
+  <<%=library%> socket="example" mode="full">
+      <div slot="results">
+      <<%=library%>-results socket="example">
+        <div slot="empty">
+          <<%=library%>-results-placeholder></<%=library%>-results-placeholder>
+        </div>
+      </<%=library%>-results>
+    </div>
+  </<%=library%>>
+  -->
 
 </body>
 </html>

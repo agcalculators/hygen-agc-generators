@@ -43,6 +43,19 @@ form.agc-wizard select {
     border: var(--agc-form-input-border-size, 1px) var(--agc-form-input-border-style, solid) var(--agc-form-input-border-color, #aaaaaa);
 }
 
+form.agc-wizard .agc-wizard__radio-group {
+    border: var(--agc-form-radio-group-border, 1px solid rgb(170, 170, 170));
+    padding: var(--agc-form-radio-group-padding, 10px);
+}
+
+form.agc-wizard .agc-wizard__radio-group input[type="radio"] {
+    margin-left: 20px;
+}
+
+form.agc-wizard .agc-wizard__radio-group input[type="radio"]:first-child {
+    margin-left: 0;
+}
+
 form.agc-wizard button {
     background-color: var(--agc-form-button-bg-color, #4CAF50);
     color: var(--agc-form-button-color, #ffffff);
